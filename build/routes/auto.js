@@ -1,0 +1,12 @@
+"use strict";
+exports.__esModule = true;
+exports.autoRouter = void 0;
+var express = require("express");
+var auto_1 = require("../controllers/auto");
+var autoRouter = express.Router();
+exports.autoRouter = autoRouter;
+autoRouter.get("/all", auto_1.autos_get);
+autoRouter.get("/", auto_1.auto_get);
+autoRouter.post("/", auto_1.auto_post);
+autoRouter.put("/", auto_1.auto_put);
+autoRouter["delete"]("/", auto_1.auto_delete);
